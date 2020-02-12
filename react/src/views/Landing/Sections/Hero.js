@@ -71,6 +71,12 @@ const RightBox = styled(Box)`
   width: 50%;
 `;
 
+const ImgBox = styled(ImageBox)`
+  background: linear-gradient(90deg, #fff 20px, transparent 1%) center,
+    linear-gradient(#fff 20px, transparent 1%) center, #d6ddff;
+  background-size: 22px 22px;
+`;
+
 class Hero extends React.Component {
   render() {
     return (
@@ -80,7 +86,42 @@ class Hero extends React.Component {
         background={r("greys.1")}
         overflow="hidden"
       >
-        test
+        <NavBar />
+        <ImgBox pt={"96px"}>
+          <Wrapper w={"100%"} m={3}>
+            <Container w={"100%"} h="100%" p={4}>
+              <LeftBox>
+                <Text
+                  mb={"1.5rem"}
+                  lineHeight={"1.18"}
+                  letterSpacing={"1px"}
+                  as="h1"
+                  fw={800}
+                  fs={"6rem"}
+                  color="blacks.0"
+                >
+                  Shared Kubernetes
+                </Text>
+                <Text
+                  mt={3}
+                  mb={4}
+                  lineHeight={"1.5"}
+                  as="p"
+                  fw={300}
+                  fs={"2.4rem"}
+                  color="blacks.0"
+                >
+                  Deploy Docker containers to production or staging environments
+                  in seconds - with free staging environments. Only pay for what
+                  you need.
+                </Text>
+              </LeftBox>
+              <RightBox>
+                <Signin mr="unset" ml="auto" />
+              </RightBox>
+            </Container>
+          </Wrapper>
+        </ImgBox>
       </Section>
     );
   }
