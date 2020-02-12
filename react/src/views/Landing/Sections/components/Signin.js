@@ -112,7 +112,7 @@ class NavigationTabs extends React.Component {
   }
 }
 
-class Sidebar extends React.Component {
+class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -125,10 +125,9 @@ class Sidebar extends React.Component {
       <Box
         transition="margin 0.2s"
         maxWidth="100%"
-        m="auto"
         w="fit-content"
         p={2}
-        mb={5}
+        {...this.props}
       >
         <Menu
           height={"50rem"}
@@ -160,4 +159,4 @@ class Sidebar extends React.Component {
   }
 }
 
-export default Sidebar;
+export default Signin;
