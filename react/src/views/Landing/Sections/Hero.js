@@ -1,10 +1,12 @@
 import React from "react";
-import {Box, Flex, Section, Button, ImageBox} from "components";
+import {Box, Flex, Section, Button, ImageBox, Text} from "components";
 import {responsive as r} from "lib";
 import styled from "styled-components";
 
+// import {ReactComponent as Logo} from "assets/anchor.svg";
+
 const heroBg = "/images/cityskyline.png";
-const HeroBG = `url(${heroBg})`;
+const HeroBG = `url(${"https://www.digitalocean.com/assets/media/homepage/bg-home-1-d54581d7.jpg"})`;
 
 const Nav = styled(Box)`
   background-color: white;
@@ -49,7 +51,7 @@ const NavBar = () => (
       </NavButton>
     </Flex>
     <Flex alignItems="center" w="100%" h={"5"}>
-      Row 2
+      Kubeshare
     </Flex>
   </Nav>
 );
@@ -57,25 +59,28 @@ const NavBar = () => (
 class Hero extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <Section
-          // p={r("2 ------> 3")}
-          height={r("60rem 70rem -> 80rem")}
-          background={r("greys.1")}
-          overflow="hidden"
-        >
-          <NavBar />
-          <ImageBox backgroundImage={[HeroBG]} pt={"96px"}>
-            content
-          </ImageBox>
-        </Section>
-        <Section
-          // p={r("2 ------> 3")}
-          height={r("60rem 70rem -> 80rem")}
-          background={r("greys.1")}
-          overflow="hidden"
-        />
-      </React.Fragment>
+      <Section
+        // p={r("2 ------> 3")}
+        height={r("60rem 70rem -> 80rem")}
+        background={r("greys.1")}
+        overflow="hidden"
+      >
+        <NavBar />
+        <ImageBox backgroundImage={[HeroBG]} pt={"96px"}>
+          <Box w={"100%"} ml={5} mr={5} mt={3} mb={3}>
+            <Box w={"100%"} h="100%" p={5}>
+              <Text as="h1" fw={500} fs={6} color="whites.0">
+                Shared Kubernetes
+              </Text>
+              <Text as="p" fw={500} fs={"2.4rem"} color="whites.0">
+                We make it simple to launch in the cloud and scale up as you
+                grow – with an intuitive control panel, predictable pricing,
+                team accounts, and more.
+              </Text>
+            </Box>
+          </Box>
+        </ImageBox>
+      </Section>
     );
   }
 }
