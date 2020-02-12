@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 // import {ReactComponent as Logo} from "assets/anchor.svg";
 
-const heroBg = "/images/cityskyline.png";
+// const heroBg = "/images/cityskyline.png";
 const HeroBG = `url(${"https://www.digitalocean.com/assets/media/homepage/bg-home-1-d54581d7.jpg"})`;
 
 const Nav = styled(Box)`
@@ -46,7 +46,7 @@ const NavBar = () => (
       w="100%"
       h={"4"}
     >
-      <NavButton fw={500} color={"greys.0"} fs={"1.2rem"}>
+      <NavButton fw={600} color={"greys.0"} fs={"1.2rem"}>
         Sign in
       </NavButton>
     </Flex>
@@ -55,6 +55,15 @@ const NavBar = () => (
     </Flex>
   </Nav>
 );
+
+const Wrapper = styled(Box)``;
+const Container = styled(Flex)`
+  align-items: center;
+`;
+const LeftBox = styled(Box)`
+  width: 50%;
+  padding: 1.6rem;
+`;
 
 class Hero extends React.Component {
   render() {
@@ -67,18 +76,36 @@ class Hero extends React.Component {
       >
         <NavBar />
         <ImageBox backgroundImage={[HeroBG]} pt={"96px"}>
-          <Box w={"100%"} ml={5} mr={5} mt={3} mb={3}>
-            <Box w={"100%"} h="100%" p={5}>
-              <Text as="h1" fw={500} fs={6} color="whites.0">
-                Shared Kubernetes
-              </Text>
-              <Text as="p" fw={500} fs={"2.4rem"} color="whites.0">
-                We make it simple to launch in the cloud and scale up as you
-                grow – with an intuitive control panel, predictable pricing,
-                team accounts, and more.
-              </Text>
-            </Box>
-          </Box>
+          <Wrapper w={"100%"} ml={5} mr={5} mt={3} mb={3}>
+            <Container w={"100%"} h="100%" p={4}>
+              <LeftBox>
+                <Text
+                  mb={"1.5rem"}
+                  lineHeight={"1.18"}
+                  letterSpacing={"1px"}
+                  as="h1"
+                  fw={800}
+                  fs={"6.4rem"}
+                  color="whites.0"
+                >
+                  Shared Kubernetes
+                </Text>
+                <Text
+                  mt={3}
+                  mb={4}
+                  lineHeight={"1.5"}
+                  as="p"
+                  fw={300}
+                  fs={"2.4rem"}
+                  color="whites.0"
+                >
+                  We make it simple to launch in the cloud and scale up as you
+                  grow – with an intuitive control panel, predictable pricing,
+                  team accounts, and more.
+                </Text>
+              </LeftBox>
+            </Container>
+          </Wrapper>
         </ImageBox>
       </Section>
     );
