@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: punqit-frontend
+  name: kubeshare-frontend
   namespace: staging
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: punqit-frontend
+      app: kubeshare-frontend
   template:
     metadata:
       labels:
-        app: punqit-frontend
+        app: kubeshare-frontend
     spec:
       containers:
         - name: main
-          image: docker-registry.punqit.com/nodejs/punqit_frontend
+          image: docker-registry.kubeshare.com/nodejs/kubeshare_frontend
           ports:
           - containerPort: 80

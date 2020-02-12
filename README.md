@@ -1,14 +1,11 @@
-# punq / punqit
+# kubeshare / kubeshare
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/veyorokon/punqit-frontend)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/veyorokon/kubeshare-frontend)
 
-![](./git-assets/punqit.gif)
+![](./git-assets/kubeshare.gif)
 
-punq is an online tool for creating deep fakes.
+kubeshare is shared kubernetes.
 
-  - Users can upload data for subject and targets from which models are trained.
-  - Models can be saved for each user.
-  - Intuitive interface to create deep fake videos at the click of a button.
 
 # New Features!
 
@@ -17,7 +14,7 @@ punq is an online tool for creating deep fakes.
 
 ### Tech
 
-punq uses a number of open source and free tier projects to work properly:
+kubeshare uses a number of open source and free tier projects to work properly:
 
 * [ReactJS] - Front end JS framework.
 * [Django] - Backend framework built with python.
@@ -25,12 +22,12 @@ punq uses a number of open source and free tier projects to work properly:
 
 ### Local Installation & Development
 
-punq requires [Node.js](https://nodejs.org/) v12.5.0+ to run.
+kubeshare requires [Node.js](https://nodejs.org/) v12.5.0+ to run.
 
 Install the frontend dependencies and start the `frontend` server. Open a new terminal and run:
 
 ```sh
-$ npm install -d
+$ npm i -d
 $ npm start
 ```
 

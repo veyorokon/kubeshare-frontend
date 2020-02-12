@@ -23,7 +23,7 @@ const theme = {
   },
   colors: {
     blacks: ["#000", "#090909"],
-    whites: ["#fff", "#FAFAFA"],
+    whites: ["#fff", "#fafafa"],
     greys: ["#7D8B98", "#e6eaef", "#edeff0"],
     oranges: ["#F87060"],
     greens: ["#596657", "#697268"]
