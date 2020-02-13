@@ -24,7 +24,7 @@ const theme = {
   colors: {
     blacks: ["#000", "#090909"],
     whites: ["#fff", "#fafafa"],
-    greys: ["#7D8B98", "#e6eaef", "#edeff0"],
+    greys: ["#7D8B98", "#e6eaef", "#edeff0", "#F4F5F9"],
     oranges: ["#F87060"],
     greens: ["#596657", "#697268"],
     navys: ["#212C39", "#112237"],

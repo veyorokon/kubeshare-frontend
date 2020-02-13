@@ -15,9 +15,9 @@ const StyledBGSvg = styled(BgSVG)`
 `;
 
 const StyledLogoSvg = styled(LogoSVG)`
-  height: 3rem;
+  height: 2.75rem;
   width: auto;
-  margin: 0 2rem;
+  margin: 0 1rem 0 2rem;
 `;
 
 const Nav = styled(Box)`
