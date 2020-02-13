@@ -26,7 +26,9 @@ const theme = {
     whites: ["#fff", "#fafafa"],
     greys: ["#7D8B98", "#e6eaef", "#edeff0"],
     oranges: ["#F87060"],
-    greens: ["#596657", "#697268"]
+    greens: ["#596657", "#697268"],
+    navys: ["#212C39", "#112237"],
+    blues: ["#1C47F5"]
   },
   radii: [0, 2, 4],
   defaultProps: {

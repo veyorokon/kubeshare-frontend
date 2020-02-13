@@ -4,10 +4,8 @@ import {responsive as r} from "lib";
 import styled from "styled-components";
 import Signin from "./components/Signin";
 
-// import {ReactComponent as Logo} from "assets/anchor.svg";
-
-// const heroBg = "/images/cityskyline.png";
-const HeroBG = `url(${"https://www.digitalocean.com/assets/media/homepage/bg-home-1-d54581d7.jpg"})`;
+const heroBg = "/images/hero-1.jpg";
+const HeroBG = `url(${heroBg})`;
 
 const Nav = styled(Box)`
   background-color: white;
@@ -77,11 +75,10 @@ class Hero extends React.Component {
       <Section
         // p={r("2 ------> 3")}
         height={r("60rem 70rem -> 80rem")}
-        background={r("greys.1")}
         overflow="hidden"
       >
         <NavBar />
-        <ImageBox backgroundImage={[HeroBG]} pt={"96px"}>
+        <ImageBox backgroundImage={HeroBG} pt={"96px"}>
           <Wrapper w={"100%"} m={3}>
             <Container w={"100%"} h="100%" p={4}>
               <LeftBox>
@@ -92,7 +89,7 @@ class Hero extends React.Component {
                   as="h1"
                   fw={800}
                   fs={"6rem"}
-                  color="whites.0"
+                  color="blacks.0"
                 >
                   Shared Kubernetes
                 </Text>
@@ -103,7 +100,7 @@ class Hero extends React.Component {
                   as="p"
                   fw={300}
                   fs={"2.4rem"}
-                  color="whites.0"
+                  color="blacks.0"
                 >
                   Deploy Docker containers to production or staging environments
                   in seconds - with free staging environments. Only pay for what

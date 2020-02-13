@@ -4,16 +4,27 @@ import {responsive as r} from "lib";
 import styled from "styled-components";
 import Signin from "./components/Signin";
 
-// import {ReactComponent as Logo} from "assets/anchor.svg";
+import {ReactComponent as BgSVG} from "assets/svg/anchor-pattern.svg";
+import {ReactComponent as LogoSVG} from "assets/svg/anchor.svg";
 
-// const heroBg = "/images/cityskyline.png";
-const HeroBG = `url(${"https://www.digitalocean.com/assets/media/homepage/bg-home-1-d54581d7.jpg"})`;
+const StyledBGSvg = styled(BgSVG)`
+  height: 100%;
+  width: auto;
+  position: absolute;
+  padding: 3rem;
+`;
+
+const StyledLogoSvg = styled(LogoSVG)`
+  height: 3rem;
+  width: auto;
+  margin: 0 2rem;
+`;
 
 const Nav = styled(Box)`
   background-color: white;
   box-shadow: 0 2px 4px rgba(3, 27, 78, 0.1);
   position: fixed;
-  z-index: 10;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -52,12 +63,17 @@ const NavBar = () => (
       </NavButton>
     </Flex>
     <Flex alignItems="center" w="100%" h={"5"}>
-      Kubeshare
+      <StyledLogoSvg />
+      <Text lineHeight={"1.5"} as="p" fw={300} fs={"2.4rem"} color="navys.0">
+        KubeShare
+      </Text>
     </Flex>
   </Nav>
 );
 
-const Wrapper = styled(Box)``;
+const Wrapper = styled(Box)`
+  z-index: 10;
+`;
 const Container = styled(Flex)`
   align-items: center;
 `;
@@ -71,23 +87,19 @@ const RightBox = styled(Box)`
   width: 50%;
 `;
 
-const ImgBox = styled(ImageBox)`
-  background: linear-gradient(90deg, #fff 20px, transparent 1%) center,
-    linear-gradient(#fff 20px, transparent 1%) center, #d6ddff;
-  background-size: 22px 22px;
-`;
-
 class Hero extends React.Component {
   render() {
     return (
       <Section
         // p={r("2 ------> 3")}
         height={r("60rem 70rem -> 80rem")}
-        background={r("greys.1")}
+        background={r("navys.1")}
         overflow="hidden"
       >
         <NavBar />
-        <ImgBox pt={"96px"}>
+
+        <ImageBox pt={"96px"}>
+          <StyledBGSvg />
           <Wrapper w={"100%"} m={3}>
             <Container w={"100%"} h="100%" p={4}>
               <LeftBox>
@@ -98,7 +110,7 @@ class Hero extends React.Component {
                   as="h1"
                   fw={800}
                   fs={"6rem"}
-                  color="blacks.0"
+                  color="whites.0"
                 >
                   Shared Kubernetes
                 </Text>
@@ -109,7 +121,7 @@ class Hero extends React.Component {
                   as="p"
                   fw={300}
                   fs={"2.4rem"}
-                  color="blacks.0"
+                  color="whites.0"
                 >
                   Deploy Docker containers to production or staging environments
                   in seconds - with free staging environments. Only pay for what
@@ -121,7 +133,7 @@ class Hero extends React.Component {
               </RightBox>
             </Container>
           </Wrapper>
-        </ImgBox>
+        </ImageBox>
       </Section>
     );
   }
