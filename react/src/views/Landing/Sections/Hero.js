@@ -12,6 +12,7 @@ const StyledBGSvg = styled(BgSVG)`
   width: auto;
   position: absolute;
   padding: 3rem;
+  top: 25px;
 `;
 
 const StyledLogoSvg = styled(LogoSVG)`
