@@ -3,13 +3,13 @@ import {Box, Flex, Section, Text} from "components";
 import {responsive as r} from "lib";
 import styled from "styled-components";
 
-// const Container = styled(Box)`
-//   background: linear-gradient(90deg, #fff 20px, transparent 1%) center,
-//     linear-gradient(#fff 20px, transparent 1%) center, #d6ddff;
-//   background-size: 22px 22px;
-//   position: relative;
-//   height: 100%;
-// `;
+const Container = styled(Flex)`
+  background: linear-gradient(90deg, #fff 20px, transparent 1%) center,
+    linear-gradient(#fff 20px, transparent 1%) center, #d6ddff;
+  background-size: 22px 22px;
+  position: relative;
+  height: 100%;
+`;
 
 const Title = styled(Text)`
   text-shadow: 0 0 black;
@@ -25,8 +25,15 @@ class Solution extends React.Component {
         background={r("grey.1")}
         overflow="hidden"
       >
-        <Box height="100%" width="100%" pt={5} pb={5}>
-          <Flex ml={5} mr={5} flexDirection="column" alignItems="center">
+        <Flex
+          bg="greys.3"
+          flexDirection="column"
+          height="100%"
+          width="100%"
+          pt={5}
+          pb={5}
+        >
+          <Flex mb={5} ml={5} mr={5} flexDirection="column" alignItems="center">
             <Title
               mt={2}
               lineHeight={"1.5"}
@@ -35,7 +42,7 @@ class Solution extends React.Component {
               fs={"3.6rem"}
               color="navys.0"
             >
-              Scalable Docker deployments
+              Scalable and secure Docker deployments
             </Title>
             <Text
               mt={3}
@@ -46,11 +53,12 @@ class Solution extends React.Component {
               fs={"2rem"}
               color="navys.2"
             >
-              Free staging deployments and high availability production
-              deployments make continuous integration easy.
+              Free staging deployments for testing and affordable high
+              availability deployments for production.
             </Text>
           </Flex>
-        </Box>
+          <Container height="100%">Test</Container>
+        </Flex>
       </Section>
     );
   }

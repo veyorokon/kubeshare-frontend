@@ -100,6 +100,7 @@ class Hero extends React.Component {
           <Wrapper w={"100%"} m={r("0 ------> 3")}>
             <Container
               flexDirection={r("column ------> row")}
+              justifyContent="center"
               w={"100%"}
               h="100%"
               p={4}
@@ -128,8 +129,8 @@ class Hero extends React.Component {
                   fs={"2.4rem"}
                   color="whites.0"
                 >
-                  From Docker to deployment in seconds with our shared
-                  Kubernetes. Scalability, convenience and security without the
+                  From Docker to deployment in seconds - with shared Kubernetes
+                  you have scalability, convenience and security without the
                   technical and financial overhead.
                 </Text>
               </LeftBox>
