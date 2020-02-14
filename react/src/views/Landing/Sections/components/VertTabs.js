@@ -17,7 +17,7 @@ const Hide = styled(Box)`
   width: 0;
   opacity: 0;
   ${props =>
-    props.display &&
+    props.showing &&
     css`
       height: 100%;
       width: 100%;
@@ -119,7 +119,7 @@ class NavigationTabs extends React.Component {
           </Navigation>
         </TabHeaders>
         {this.props.children.map((elem, index) => (
-          <Hide key={index} display={selected === index}>
+          <Hide key={index} showing={selected === index}>
             {elem}
           </Hide>
         ))}

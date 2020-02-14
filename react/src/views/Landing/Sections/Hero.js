@@ -46,7 +46,7 @@ const NavButton = styled(Button)`
   letter-spacing: 0.2px;
   transition: color 0.3s ease-in-out;
   &:hover {
-    color: #333;
+    color: #8be48c;
   }
 `;
 
@@ -59,7 +59,12 @@ const NavBar = () => (
       w="100%"
       h={"4"}
     >
-      <NavButton fw={600} color={"greys.0"} fs={"1.2rem"}>
+      <NavButton
+        hoverColor={"greens.2"}
+        fw={600}
+        color={"greys.0"}
+        fs={"1.2rem"}
+      >
         Sign in
       </NavButton>
     </Flex>
