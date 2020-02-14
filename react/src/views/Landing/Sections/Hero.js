@@ -78,21 +78,18 @@ const Container = styled(Flex)`
   align-items: center;
 `;
 const LeftBox = styled(Box)`
-  width: 50%;
   padding: 1rem;
   padding-right: 3rem;
 `;
 
-const RightBox = styled(Box)`
-  width: 50%;
-`;
+const RightBox = styled(Box)``;
 
 class Hero extends React.Component {
   render() {
     return (
       <Section
         // p={r("2 ------> 3")}
-        height={r("60rem 70rem -> 80rem")}
+        height={r("110rem ------> 80rem")}
         background={r("navys.1")}
         overflow="hidden"
       >
@@ -100,10 +97,17 @@ class Hero extends React.Component {
 
         <ImageBox pt={"96px"}>
           <StyledBGSvg />
-          <Wrapper w={"100%"} m={3}>
-            <Container w={"100%"} h="100%" p={4}>
-              <LeftBox>
+          <Wrapper w={"100%"} m={r("0 ------> 3")}>
+            <Container
+              flexDirection={r("column ------> row")}
+              w={"100%"}
+              h="100%"
+              p={4}
+            >
+              <LeftBox w={r("100% ------> 50%")}>
                 <Text
+                  textAlign={r("center ------> left")}
+                  width="100%"
                   mb={"1.5rem"}
                   lineHeight={"1.18"}
                   letterSpacing={"1px"}
@@ -115,21 +119,22 @@ class Hero extends React.Component {
                   Shared Kubernetes
                 </Text>
                 <Text
+                  textAlign={r("center ------> left")}
                   mt={3}
                   mb={4}
-                  lineHeight={"1.5"}
+                  lineHeight={"1.87"}
                   as="p"
                   fw={300}
                   fs={"2.4rem"}
                   color="whites.0"
                 >
-                  Deploy Docker containers to production or staging environments
-                  in seconds - with free staging environments. Only pay for what
-                  you need.
+                  From Docker to deployment in seconds with our shared
+                  Kubernetes. Scalability, convenience and security without the
+                  technical and financial overhead.
                 </Text>
               </LeftBox>
-              <RightBox>
-                <Signin mr="unset" ml="auto" />
+              <RightBox w={r("100% ------> 50%")}>
+                <Signin m="auto" mr={r("auto ------> unset")} />
               </RightBox>
             </Container>
           </Wrapper>
