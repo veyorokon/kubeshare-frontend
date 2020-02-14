@@ -126,7 +126,6 @@ class Signin extends React.Component {
         transition="margin 0.2s"
         maxWidth="100%"
         w="fit-content"
-        p={2}
         {...this.props}
       >
         <Menu

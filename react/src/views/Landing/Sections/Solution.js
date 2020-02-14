@@ -47,6 +47,7 @@ class Solution extends React.Component {
               fw={300}
               fs={"2rem"}
               color="navys.2"
+              textAlign="center"
             >
               Free staging deployments for testing and affordable high
               availability deployments for production.
