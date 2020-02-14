@@ -1,5 +1,5 @@
 {
-  "name": "custom-design-system",
+  "name": "kubeshare-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

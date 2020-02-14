@@ -42,13 +42,14 @@ class TabComponent extends React.Component {
     return (
       <Tabs>
         <TabHeaders>
-          {this.props.tabHeaders.map((elem, index) => {
-            return (
-              <Tab key={index} onClick={() => this.handleChange(index)}>
-                {elem}
-              </Tab>
-            );
-          })}
+          {this.props.tabHeaders &&
+            this.props.tabHeaders.map((elem, index) => {
+              return (
+                <Tab key={index} onClick={() => this.handleChange(index)}>
+                  {elem}
+                </Tab>
+              );
+            })}
         </TabHeaders>
         <TabContents>{this.props.children[this.state.selected]}</TabContents>
       </Tabs>

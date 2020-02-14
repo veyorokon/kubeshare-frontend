@@ -3,13 +3,7 @@ import {Box, Flex, Section, Text} from "components";
 import {responsive as r} from "lib";
 import styled from "styled-components";
 
-const Container = styled(Flex)`
-  background: linear-gradient(90deg, #fff 20px, transparent 1%) center,
-    linear-gradient(#fff 20px, transparent 1%) center, #d6ddff;
-  background-size: 22px 22px;
-  position: relative;
-  height: 100%;
-`;
+import VertTabs from "./components/VertTabs";
 
 const Title = styled(Text)`
   text-shadow: 0 0 black;
@@ -22,6 +16,7 @@ class Solution extends React.Component {
       <Section
         // p={r("2 ------> 3")}
         height={r("80rem")}
+        minHeight="fit-content"
         background={r("grey.1")}
         overflow="hidden"
       >
@@ -57,7 +52,9 @@ class Solution extends React.Component {
               availability deployments for production.
             </Text>
           </Flex>
-          <Container height="100%">Test</Container>
+          <Box width="100%" height="100%">
+            <VertTabs height="100%">test</VertTabs>
+          </Box>
         </Flex>
       </Section>
     );

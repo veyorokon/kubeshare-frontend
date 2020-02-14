@@ -16,7 +16,7 @@ const StyledBGSvg = styled(BgSVG)`
 `;
 
 const StyledLogoSvg = styled(LogoSVG)`
-  height: 2.75rem;
+  height: 2.65rem;
   width: auto;
   margin: 0 1rem 0 2rem;
 `;
