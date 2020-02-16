@@ -31,15 +31,17 @@ const Menu = styled(Flex)`
 `;
 
 const PanelNavigation = styled(Flex)`
-  width: 7rem;
+  width: 9rem;
   height: 100%;
   flex-direction: column;
+
+  justify-content: end;
 `;
 
 // const PanelItem = styled(Box)``;
 
 const NavigationTabItem = styled(Flex)`
-  height: 7rem;
+  height: 6rem;
   padding: 1.75rem 0;
   cursor: pointer;
   justify-content: center;
@@ -66,6 +68,8 @@ const Navigation = ({children}) => {
 
 const Header = styled(Text)`
   transition: all 0.3s ease-in-out;
+  margin-left: 1rem;
+  margin-right: auto;
 `;
 
 const TabPanel = ({children}) => {
@@ -98,7 +102,7 @@ class NavigationTabs extends React.Component {
     const {selected} = this.state;
     return (
       <React.Fragment>
-        <TabHeaders bg="white">
+        <TabHeaders overflow="hidden" bg="white">
           <Navigation>
             {this.props.tabHeaders.map((elem, index) => {
               const isActive = selected === index;
@@ -131,10 +135,10 @@ class NavigationTabs extends React.Component {
 class VertTabs extends React.Component {
   render() {
     return (
-      <Menu h="100%" bg="whites.0" p={3} pl={5} pr={5} m={0}>
+      <Menu h="100%" bg="whites.0" {...this.props}>
         <NavigationTabs
           selected={0}
-          tabHeaders={["Test 1", "Test 2", "Test 3"]}
+          tabHeaders={["Staging", "Production", "Scaling"]}
           // tabHeaders={[<ImageIcon />, <EditIcon />, <LayoutIcon />]}
         >
           <TabPanel>test 1</TabPanel>

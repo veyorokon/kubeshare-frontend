@@ -14,7 +14,6 @@ class Solution extends React.Component {
   render() {
     return (
       <Section
-        // p={r("2 ------> 3")}
         height={r("80rem")}
         minHeight="fit-content"
         background={r("grey.1")}
@@ -31,6 +30,7 @@ class Solution extends React.Component {
           <Flex mb={5} ml={5} mr={5} flexDirection="column" alignItems="center">
             <Title
               mt={2}
+              textAlign="center"
               lineHeight={"1.5"}
               as="h2"
               fw={600}
@@ -53,9 +53,20 @@ class Solution extends React.Component {
               availability deployments for production.
             </Text>
           </Flex>
-          <Box width="100%" height="100%">
-            <VertTabs height="100%">test</VertTabs>
-          </Box>
+          <Flex
+            flexDirection="column"
+            bg="whites.0"
+            p={3}
+            pl={5}
+            pr={5}
+            m={0}
+            width="100%"
+            height="100%"
+          >
+            <VertTabs ml={6} mr={6} height="100%">
+              test
+            </VertTabs>
+          </Flex>
         </Flex>
       </Section>
     );

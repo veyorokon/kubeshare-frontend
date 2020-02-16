@@ -9,7 +9,6 @@
 import React from "react";
 import {Box, Flex, TabHeaders} from "components";
 import styled, {css} from "styled-components";
-import {responsive as r} from "lib";
 
 const Menu = styled(Flex)`
   box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 5px 0px;
@@ -133,7 +132,6 @@ class Signin extends React.Component {
           width={"50rem"}
           bg={"whites.0"}
           color={"blacks.0"}
-          m={r("0 ---> 2")}
           borderRadius={"2px"}
           flexDirection="column"
         >
