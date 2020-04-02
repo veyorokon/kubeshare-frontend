@@ -1,17 +1,21 @@
 # Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
-WORKDIR /app
+FROM node:10-alpine as build-stage
+WORKDIR /opt/app
 
-COPY package*.json /app/
-RUN npm install --silent
-COPY ./ /app/
+COPY package-lock.json package-lock.json
+COPY package.json package.json
+COPY jsconfig.json jsconfig.json
+RUN npm install --silent \
+  && npm audit fix
+
+COPY src src
+COPY public public
+
 RUN npm run build
 
-
 # Stage 1, based on Nginx build app ready for production with Nginx
-FROM nginx:1.15
-COPY --from=build-stage /app/build/ /usr/share/nginx/html
-# Copy the default nginx.conf
-COPY --from=build-stage /app/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+FROM nginx:alpine
 
-#ENV REACT_APP_BACKEND_API someenv.com
+COPY --from=build-stage /opt/app/build/ /usr/share/nginx/html
+# Copy the default nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
